@@ -4,7 +4,7 @@ import './styles.css';
 import { RecordsResponse } from './types';
 import { formatDate } from './Helpers';
 import Pagination from './Pagination';
-import { Link } from 'react-router-dom';
+import Filters from '../../components/Filters';
 
 const BASE_URL = 'http://localhost:8080';
 
@@ -27,11 +27,7 @@ export default function Records() {
 
   return (
     <div className="page-container">
-      <div className="filters-container records-actions">
-        <Link to="/charts">
-          <button className="action-filters">VER GRÁFICOS</button>
-        </Link>
-      </div>
+      <Filters link="/charts" linkText="VER GRÁFICO" />
       <table className="records-table" cellPadding="0" cellSpacing="0">
         <thead>
           <tr>
